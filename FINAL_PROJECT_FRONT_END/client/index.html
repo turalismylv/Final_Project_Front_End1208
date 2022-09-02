@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
+        integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700&display=swap"
+        rel="stylesheet">
+
+
+    <script src="./script.js" defer></script>
+    <script src="./navigation.js" defer></script>
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <div class="wrapper">
+
+        <nav class="navigation">
+            <div class="logodiv">
+                <a href="./index.html"><img class="logo"
+                        src="../assets/photos/vecteezy_black-and-white-open-book-vector-logo-illustration-on-white_6115725.jpg"
+                        alt="logo"></a>
+            </div>
+            <div class="infodiv">
+                <div class="bookss"><a class="books" href="./books.html">Books</a></div>
+
+                <div><a class="authors" href="./authors.html">Authors</a></div>
+
+                <div class="login">Login</div>
+                <div class="Sign-Up">Sign Up</div>
+            </div>
+
+            <!-- <p>turalhi@code.edu.az</p>
+            <div><a class="dash" href="./dashboard.html">DashBoard</a></div>
+            <div>Log out</div> -->
+            
+        </nav>
+
+        <img class="spinnerRR" src="../assets/Spinner-1s-200px.svg" alt="">
+
+        <!-- Modal SignUp -->
+        <div class="signupmodal">
+            <div class="close-btn">x</div>
+            <div class="form">
+                <form class="formsignup">
+                    <input class="signupinput" id="inputname" type="text" placeholder="Type name">
+                    <input class="signupinput" id="inputsurname" type="text" placeholder="Type surname">
+                    <input class="signupinput" id="inputmail" type="text" placeholder="Enter mail">
+                    <input class="signupinput" id="inputpassword" type="password" placeholder="Enter Password">
+                </form>
+                <div class="signupbtn">Sign Up</div>
+                <p class="succ">HAKUNA MA TA TA</p>
+                <p class="errr">Error</p>
+            </div>
+        </div>
+        <!-- Modal Login -->
+        <div class="loginmodal">
+            <div class="close-btn2">x</div>
+            <div class="form2">
+                <form class="formlogin">
+                    <input class="signupinput" id="loginmail" type="text" placeholder="Enter mail">
+                    <input class="signupinput" id="loginpassword" type="password" placeholder="Enter Password">
+                </form>
+                <div class="loginbtn">Login</div>
+                <p class="suc">HAKUNA MA TA TA</p>
+                <p class="err">Error</p>
+            </div>
+        </div>
+
+
+
+        
+        <div class="one-book">
+
+            <!-- <div >
+            <img class="left" src="http://prodimage.images-bn.com/pimages/9781499369748_p0_v3_s1200x630.jpg" alt="">
+        </div>
+        <div class="right">
+            <div>
+                <p class="first-p">Pride and Prejudice</p>
+            </div>
+            <div class="second-line">
+                <div>
+                    <p class="second-p">Author</p>
+                    <p class="secondd-p">Jane Austen</p>
+                </div>
+                <div>
+                    <p class="second-p" >Type</p>
+                    <p class="secondd-p">Drama,Classics</p>
+                </div>
+                <div>
+                    <p class="second-p">Layout</p>
+                    <p class="secondd-p">Hard Cover</p>
+                </div>
+              
+            </div>
+            <div>
+                <p class="three-p">18$</p>
+            </div>
+        </div> -->
+        </div>
+
+        <div class="two-book">
+            <div class="two-books">
+
+
+                <!-- <div>
+                <img class="two-left" src="http://prodimage.images-bn.com/pimages/9781499369748_p0_v3_s1200x630.jpg"
+                    alt="">
+            </div>
+            <div class="two-right">
+                <div>
+                    <p class="first-pp">Pride and Prejudice</p>
+                </div>
+                <div class="second-line">
+                    <div>
+                        <p class="second-p">Author</p>
+                        <p class="secondd-p">Jane Austen</p>
+                    </div>
+                    <div>
+                        <p class="second-p">Type</p>
+                        <p class="secondd-p">Drama,Classics</p>
+                    </div>
+                    <div>
+                        <p class="second-p">Layout</p>
+                        <p class="secondd-p">Hard Cover</p>
+                    </div>
+
+                </div>
+                <div>
+                    <p class="three-p">18$</p>
+                </div>
+            </div> -->
+            </div>
+
+
+        </div>
+
+        <section>
+            <div class="section2">
+                <h3 class="allbook">TOP SELLING BOOKS</h3>
+                <div class="section2div">
+                    <!-- <div class="divbook">
+                        <img class="divbookimg" src="https://imusic.b-cdn.net/images/item/original/822/9781788701822.jpg?robert-lacey-2020-the-crown-the-official-history-behind-the-hit-netflix-series-political-scandal-personal-struggle-and-the-years-that-defined-elizabeth-ii-1956-1977-paperback-book&class=scaled" alt="">
+                        <h3 class="divbookh3">The Crown</h3>
+                        <p class="divbookp"><span class="divbooksp">By</span>Robert Lacey</p>
+                        <p class="divbookprice">$30</p>
+                    </div> -->
+                </div>
+
+            </div>
+
+        </section>
+
+        <section>
+            <div class="section3">
+                <h3 class="author">AUTHORS</h3>
+                <div class="section3div">
+                    <!-- <div class="sec3div">
+                       
+                        <img class="sec3img" src="https://media.npr.org/assets/img/2016/02/19/ap_844183792565_custom-2eaad7c41a5ffb8a78675aacbeca542c5761dfba-s1100-c50.jpg" alt="">
+                        <p class="sec3p">Harper Lee</p>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+
+
+
+        <footer>
+            <h3 class="foth3">BOOK STORE</h3>
+            <p class="fotp">© All rights reserved 2022</p>
+        </footer>
+
+
+    </div>
+
+    </div>
+</body>
+
+</html>

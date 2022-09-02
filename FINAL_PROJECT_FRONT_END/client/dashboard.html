@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
+        integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     <script src="./navigation.js" defer></script>
+    <script src="./dashboard.js" defer></script>
+    
+</head>
+
+<body>
+    <div class="dashwrapper">
+        <nav class="navigation">
+            <div class="logodiv">
+                <a href="./index.html"><img class="logo"
+                        src="../assets/photos/vecteezy_black-and-white-open-book-vector-logo-illustration-on-white_6115725.jpg"
+                        alt="logo"></a>
+            </div>
+            <div class="infodiv">
+                 <div class="bookss"><a class="books" href="./books.html">Books</a></div>
+                 <div><a class="authors" href="./authors.html">Authors</a></div>
+          
+                 <div class="login">Login</div>
+                 <div class="Sign-Up">Sign Up</div>
+            </div>
+            
+            <!-- <p>turalhi@code.edu.az</p>
+            <div><a class="dash" href="./dashboard.html">DashBoard</a></div>
+            <div>Log out</div> -->
+        </nav>
+       
+        <!-- Modal SignUp -->
+        <div class="signupmodal">
+            <div class="close-btn">x</div>
+            <div class="form">
+                <form class="formsignup">
+                    <input class="signupinput" id="inputname" type="text" placeholder="Type name">
+                    <input class="signupinput" id="inputsurname" type="text" placeholder="Type surname">
+                    <input class="signupinput" id="inputmail" type="text" placeholder="Enter mail">
+                    <input class="signupinput" id="inputpassword" type="text" placeholder="Enter Password">
+                </form>
+                <div class="signupbtn">Sign Up</div>
+                <p class="succ">HAKUNA MA TA TA</p>
+                <p class="errr">Error</p>
+            </div>
+        </div>
+        <!-- Modal Login -->
+        <div class="loginmodal">
+            <div class="close-btn2">x</div>
+            <div class="form2">
+                <form class="formlogin">
+                    <input class="signupinput" id="loginmail" type="text" placeholder="Enter mail">
+                    <input class="signupinput" id="loginpassword" type="text" placeholder="Enter Password">
+                </form>
+                <div class="loginbtn">Login</div>
+                <p class="suc">HAKUNA MA TA TA</p>
+                <p class="err">Error</p>
+            </div>
+        </div>
+        <div>
+            <img class="spinnerR" src="../assets/Spinner-1s-200px.svg" alt="">
+
+            <h3 class="allbook">DASHBOARD</h3>
+
+            <div class="dashelem">
+                <p class="dashelemp">Books</p>
+                <p class="dashelemp">Authors</p>
+                <p class="dashelemp">Users</p>
+            </div>
+           
+            <div class="books-table">
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <td class="td">#id</td>
+                            <td class="td">Title</td>
+                            <td class="td">Author</td>
+                            <td class="td">Price</td>
+                            <td class="td">Genre</td>
+                            <td class="td">BookCover</td>
+                            <td class="td lasttd">+</td>
+                        </tr>
+                    </thead>
+                    <tbody class="table-body">
+    
+                    </tbody>
+                </table>
+            </div>
+            <!-- <div class="publishdiv">
+                <div class="publish">
+                    <div class="close-btnn">x</div>
+                    <form class="publishform">
+                        <input class="formpublish" type="text" placeholder="#id" disabled>
+                        <input class="formpublish" type="text" placeholder="Title">
+                        <input class="formpublish" type="text" placeholder="Book Author">
+                        <input class="formpublish" type="text" placeholder="Publisher">
+                        <input class="formpublish" type="text" placeholder="Enter Price">
+                        <input class="formpublish" type="text" placeholder="Enter IMG URL">
+                        <div class="genres">Genres:
+                            <div>
+                                <input type="checkbox" id="drama">Drama
+                                <input type="checkbox" id="drama">Classics
+                                <input type="checkbox" id="drama">Novel
+                                <input type="checkbox" id="drama">History
+                                <input type="checkbox" id="drama">Children
+                                <input type="checkbox" id="drama">biography
+                                <input type="checkbox" id="drama">Fivtion
+                                <input type="checkbox" id="drama">Animal
+                                <input type="checkbox" id="drama">Detective
+                                <input type="checkbox" id="drama">Fantasy
+                                <input type="checkbox" id="drama">Espionage
+                            </div>
+    
+                        </div>
+                        <input class="formpubli" type="text" placeholder="Enter Short Description">
+                        <div class="radiodiv">Book Cover:
+                            <input type="radio" id="coverhard" name="cover" checked>
+                            <label for="coverhard" class="hard">Hard</label>
+                            <input type="radio" id="coversoft" name="cover">
+                            <label for="coversoft">Soft</label>
+                        </div>
+                        <input class="formpublish" type="text" placeholder="Published In">
+                        <input class="formpublish" type="text" placeholder="Units Sold">
+                        <div class="btnpublish">Publish</div>
+                    </form>
+    
+                </div>
+            </div> -->
+        </div>
+        </div>
+        
+    <footer class="footerdash">
+        <h3 class="foth3">BOOK STORE</h3>
+        <p class="fotp">© All rights reserved 2022</p>
+    </footer>
+</body>
+
+</html>

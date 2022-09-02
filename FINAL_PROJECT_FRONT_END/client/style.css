@@ -1,0 +1,687 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+
+.wrapper{
+    /* background-color: rgb(241, 215, 215); */
+    position: relative;
+}
+
+.navigation{
+display: flex;
+gap: 47px;
+padding-left: 50px;
+padding-right: 50px;
+text-align: center;
+align-items: center;
+/* padding-bottom: 50px; */
+border-bottom: 1px solid black;
+background-color: #e0c8c8;
+justify-content: space-between;
+}
+
+.infodiv{
+    display: flex;
+    gap: 50px;
+}
+
+.logo{
+    width: 150px;
+    height: 150px;
+    
+    margin-right: 375px;
+    cursor: pointer;
+}
+.logodiv{
+    width: 150px;
+}
+
+.books{
+    text-decoration: none;
+    color: rgb(150, 4, 4);
+   
+   font-size: 20px;
+}
+
+.dash{
+    text-decoration: none;
+    color: rgb(150, 4, 4);
+   
+   font-size: 20px;
+}
+
+.dash:hover{
+color: black;
+}
+.authors{
+    text-decoration: none;
+    color: rgb(150, 4, 4);
+   
+   font-size: 20px;
+}
+
+.authors:hover{
+    color: black;
+}
+
+.books:hover{
+    color: black;
+}
+
+.login{
+    color: rgb(150, 4, 4);
+    font-size: 20px;
+    cursor: pointer;
+}
+.logout{
+    color: rgb(150, 4, 4);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.logout:hover{
+    color: black;
+}
+
+.login:hover{
+    color: black;
+}
+
+.Sign-Up{
+    color: rgb(150, 4, 4);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.Sign-Up:hover{
+    color:black
+}
+
+.one-book{
+    width: 1200px;
+    height: 700px;
+    /* border: 1px solid red; */
+    
+    margin: 0 auto;
+    margin-top: 100px;
+    display: flex;
+    gap: 150px;
+}
+
+.left{
+    height: 700px;
+    
+}
+
+.right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+}
+
+.second-line{
+    display: flex;
+    gap: 80px;
+}
+
+.first-p{
+    color: rgb(150, 4, 4);
+   font-weight: 700;
+   font-size: 70px;
+}
+
+.second-p{
+    color: rgb(245, 151, 151);
+   font-weight: 400;
+   font-size: 18px;
+}
+
+.secondd-p{
+    color: rgb(150, 4, 4);
+    font-weight: 500;
+    font-size: 22px;
+}
+
+.three-p{
+    color: rgb(150, 4, 4);
+   font-weight: 500;
+   font-size: 40px;
+}
+
+.book-wrapper{
+    padding-top: 30px;
+    padding-left: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap:30px;
+}
+
+.allbook{
+    font-size: 35px;
+    color: green;
+    
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+.book-second{
+    margin-top: 40px;
+    
+}
+
+.bookinfo{
+    width: 600px;
+    height: 400px;
+    border: 1px solid black;
+    box-shadow: 5px 1px 10px -1px rgba(0,0,0,0.75);
+    display: flex;
+}
+
+.left2{
+    width: 300px;
+    height: 400px;
+}
+
+.divname{
+    margin-top: 20px;
+    color: rgb(150, 4, 4);
+    font-weight: 500;
+    font-size: 22px;
+    text-align: center;
+}
+
+.divauthor{
+   text-align: center;
+    font-weight: 700;
+    color:rgba(5, 248, 167, 0.995)
+}
+.by{
+    margin-right: 10px;
+    font-weight: 700;
+    color: black;
+}
+
+.spoiler{
+    /* width: 250px;
+    height: 200px; */
+    margin-top: 30px;
+    font-size: 14px;
+    margin-left: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    /* padding-right: 20px; */
+    border-left: 2px solid rgb(149, 140, 140);
+    height: 250px;
+    overflow: hidden;
+}
+
+.author-wrapper{
+    margin-top: 50px;
+    margin-left: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 50px;
+}
+
+.authornum{
+    width: 800px;
+    height: 250px;
+    border: 1px solid black;
+    display: flex;
+    box-shadow: 5px 1px 10px -1px rgba(0,0,0,0.75);
+}
+.authleft{
+    margin-top: 30px;
+    padding-left: 15px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.authright{
+    margin-left: 40px;
+}
+
+.rightname{
+    margin-top: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.rightinfo{
+    font-weight: 400;
+    font-size: 14px;
+    padding: 0 10px;
+}
+
+.two-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+/* .two-book{
+    display: flex;
+    width: 500px;
+    padding-left: 130px;
+    
+    margin-top: 200px;
+    gap: 30px;
+    
+} */
+.two-books{
+    margin-top: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 200px;
+    
+}
+.two-left{
+    width: 200px;
+    height: 400px;
+}
+.first-pp{
+    color: rgb(150, 4, 4);
+    font-weight: 500;
+    font-size: 50px;
+}
+
+.section2{
+    margin-top: 100px;
+    width: 100%;
+    
+    /* border: 1px solid red; */
+    background-color: rgb(221, 241, 235);
+}
+
+.section2div{
+    margin-left: 50px;
+    margin-right: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.divbook{
+    margin-top: 100px;
+}
+.divbookimg{
+    width: 300px;
+    height: 400px;
+}
+
+.divbookh3{
+    color: rgba(6, 102, 6, 0.868);
+    font-size: 30px;
+    font-weight: 700;
+    width: 250px;
+   
+}
+
+.divbooksp{
+    margin-right: 10px;
+    color: rgb(166, 115, 98);
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.divbookp{
+    font-weight: 700;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.divbookprice{
+    color: rgba(6, 102, 6, 0.868);
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.section3{
+    margin-top: 50px;
+}
+
+.author{
+    margin-left: 50px;
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.section3div{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 50px;
+    margin-top: 80px;
+}
+.sec3div{
+    margin-left: 50px;
+    margin-right: 50px;
+
+    
+}
+
+.sec3img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.sec3p{
+    margin-top: 15px;
+    font-weight: 700;
+    font-size: 20px;
+    width: 200px;
+    text-align: center;
+}
+footer{
+    margin-top: 100px;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    background-color: rgb(60, 179, 110);
+}
+
+.foth3{
+    color: white;
+    font-size: 30px;
+}
+.fotp{
+    color: white;
+    font-size: 20px;
+}
+
+.signupmodal{
+    display: none;
+    width: 500px;
+    height: 250px;
+    border: 1px solid red;
+    background-color: wheat;
+    position: sticky;
+    top: 0;
+    left: 37%;
+    
+    backdrop-filter: blur(5px);
+}
+
+.loginmodal{
+    display: none;
+    width: 500px;
+    height: 250px;
+    border: 1px solid red;
+    background-color: wheat;
+    position: sticky;
+    top: 0;
+    left: 37%;
+    
+    backdrop-filter: blur(5px);
+}
+
+
+.form{
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.form2{
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.signupinput{
+    height: 40px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-decoration: none;
+    outline: none;
+}
+
+.signupbtn{
+    cursor: pointer;
+    border: 1px solid black;
+    width:189px;
+    text-align: center;
+    padding-top: 5px;
+    height: 40px;
+    font-size: 20px;
+    
+}
+
+.loginbtn{
+    cursor: pointer;
+    border: 1px solid black;
+    width:189px;
+    text-align: center;
+    padding-top: 5px;
+    height: 40px;
+    font-size: 20px;
+}
+
+.close-btn {
+    width: fit-content;
+    /* background-color: red; */
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    font-size: 50px;
+    text-align: center;
+    font-weight: 300;
+    cursor: pointer;
+    /* border: 1px solid red; */
+}
+
+.close-btn2{
+    width: fit-content;
+    /* background-color: red; */
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    font-size: 50px;
+    text-align: center;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+
+
+.suc{
+    display: none;
+    margin-top: 20px;
+    color: green;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.err{
+    display: none;
+    color: red;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.succ{
+    display: none;
+    margin-top: 20px;
+    color: green;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.errr{
+    display: none;
+    color: red;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.dashelem{
+    margin-left: 50px;
+    margin-top: 50px;
+    display: flex;
+    gap: 20px;
+    color: mediumseagreen;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.dashelemp:hover{
+    cursor: pointer;
+    border-bottom: 1px solid mediumaquamarine;
+}
+
+.books-table{
+    margin-top: 50px;
+    margin-left: 100px;
+    width: 500px;
+    
+}
+
+.td{
+    padding-right: 150px;
+    padding-left: 10px;
+    font-weight: 700;
+}
+
+td{
+    padding-right: 150px;
+    padding-left: 10px;
+
+}
+
+.lasttd{
+    font-size: 30px;
+    color: yellowgreen;
+    padding-left: 70px;
+    padding-right: 70px;
+    cursor: pointer;
+}
+
+.icons{
+    width: 30px;
+    margin-left: 55px;
+    cursor: pointer;
+}
+
+.lasttdd{
+    padding-right: 20px;
+}
+
+.dashwrapper{
+    position: relative;
+}
+.publishdiv{
+    display: none;
+}
+
+.publish{
+    width: 700px;
+    height: 800px;
+    border: 1px solid red;
+    position: absolute;
+    top: 200px;
+    left: 650px;
+    background-color: whitesmoke;
+    
+}
+
+.footerdash{
+    margin-top: 200px;
+}
+
+.close-btnn {
+    width: fit-content;
+    /* background-color: red; */
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    font-size: 50px;
+    text-align: center;
+    font-weight: 300;
+    cursor: pointer;
+    /* border: 1px solid red; */
+}
+
+.publishform{
+    margin-top: 100px;
+    margin-left: 150px;
+}
+
+.formpublish{
+    height: 40px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-decoration: none;
+    outline: none;
+}
+
+.genres{
+    padding-left: 20px;
+    padding-top: 10px;
+    width: 400px;
+    height: 180px;
+    border: 1px solid red;
+    color: red;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.formpubli{
+    height: 100px;
+    width: 400px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-decoration: none;
+    outline: none;
+}
+
+.radiodiv{
+    margin-bottom: 20px;
+}
+
+.hard{
+    
+    margin-right: 10px;
+}
+
+
+.btnpublish{
+    cursor: pointer;
+    width: 190px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px solid red;
+}
+
+.spinner{
+    display: none;
+    width: 20%;
+    height: 20%;
+}
+
+.spinnerR{
+    display: none;
+    width: 45%;
+    margin-left: 500px;
+}
+
+.spinnerRR{
+    display: none;
+    width: 45%;
+    margin-left: 500px;
+    background-color: rgb(241, 215, 215);
+}

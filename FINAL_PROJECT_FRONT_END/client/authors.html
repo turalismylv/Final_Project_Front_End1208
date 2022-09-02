@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./authors.js" defer></script>
+    <script src="./navigation.js" defer></script>
+</head>
+<body>
+    <nav class="navigation">
+        <div class="logodiv">
+            <a href="./index.html"><img class="logo"
+                    src="../assets/photos/vecteezy_black-and-white-open-book-vector-logo-illustration-on-white_6115725.jpg"
+                    alt="logo"></a>
+        </div>
+        <div class="infodiv">
+             <div class="bookss"><a class="books" href="./books.html">Books</a></div>
+             <div><a class="authors" href="./authors.html">Authors</a></div>
+      
+             <div class="login">Login</div>
+             <div class="Sign-Up">Sign Up</div>
+        </div>
+        
+        <!-- <p>turalhi@code.edu.az</p>
+        <div><a class="dash" href="./dashboard.html">DashBoard</a></div>
+        <div>Log out</div> -->
+    </nav>
+    <!-- Modal SignUp -->
+    <div class="signupmodal">
+        <div class="close-btn">x</div>
+        <div class="form">
+            <form class="formsignup" >
+                <input class="signupinput" id="inputname" type="text" placeholder="Type name">
+                <input class="signupinput" id="inputsurname" type="text" placeholder="Type surname">
+                <input class="signupinput" id="inputmail" type="text" placeholder="Enter mail" >
+                <input class="signupinput" id="inputpassword" type="password" placeholder="Enter Password">
+            </form>
+            <div class="signupbtn">Sign Up</div>
+            <p class="succ">HAKUNA MA TA TA</p>
+            <p class="errr">Error</p>
+        </div>
+    </div>
+     <!-- Modal Login -->
+     <div class="loginmodal">
+        <div class="close-btn2">x</div>
+        <div class="form2">
+            <form class="formlogin" >
+                <input class="signupinput" id="loginmail" type="text" placeholder="Enter mail" >
+                <input class="signupinput" id="loginpassword" type="password" placeholder="Enter Password">
+            </form>
+            <div class="loginbtn">Login</div>
+            <p class="suc">HAKUNA MA TA TA</p>
+            <p class="err">Error</p>
+        </div>
+    </div>
+    <h3 class="allbook">All Authors</h3>
+    <div class="author-wrapper">
+        <img class="spinner" src="../assets/Spinner-1s-200px.svg" alt="">
+        <!-- <div class="authornum">
+            <div  ><img class="authleft" src="https://media.npr.org/assets/img/2016/02/19/ap_844183792565_custom-2eaad7c41a5ffb8a78675aacbeca542c5761dfba-s1100-c50.jpg" alt=""></div>
+
+            <div class="authright">
+                <h3 class="rightname">Harper Lee</h3>
+                <p class="rightinfo">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil quisquam temporibus fugit asperiores veritatis deleniti minima ab quod pariatur placeat nisi vel obcaecati exercitationem corporis sed, recusandae, itaque facere ipsum!</p>
+            </div>
+        </div> -->
+        
+     
+        
+    </div>
+    <footer>
+        <h3 class="foth3">BOOK STORE</h3>
+        <p class="fotp">© All rights reserved 2022</p>
+    </footer>
+</body>
+</html>
