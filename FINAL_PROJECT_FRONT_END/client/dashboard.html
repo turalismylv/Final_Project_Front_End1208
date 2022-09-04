@@ -11,9 +11,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
         integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-     <script src="./navigation.js" defer></script>
+    <script src="./navigation.js" defer></script>
     <script src="./dashboard.js" defer></script>
-    
+
 </head>
 
 <body>
@@ -25,18 +25,18 @@
                         alt="logo"></a>
             </div>
             <div class="infodiv">
-                 <div class="bookss"><a class="books" href="./books.html">Books</a></div>
-                 <div><a class="authors" href="./authors.html">Authors</a></div>
-          
-                 <div class="login">Login</div>
-                 <div class="Sign-Up">Sign Up</div>
+                <div class="bookss"><a class="books" href="./books.html">Books</a></div>
+                <div><a class="authors" href="./authors.html">Authors</a></div>
+
+                <div class="login">Login</div>
+                <div class="Sign-Up">Sign Up</div>
             </div>
-            
+
             <!-- <p>turalhi@code.edu.az</p>
             <div><a class="dash" href="./dashboard.html">DashBoard</a></div>
             <div>Log out</div> -->
         </nav>
-       
+
         <!-- Modal SignUp -->
         <div class="signupmodal">
             <div class="close-btn">x</div>
@@ -71,13 +71,28 @@
             <h3 class="allbook">DASHBOARD</h3>
 
             <div class="dashelem">
-                <p class="dashelemp">Books</p>
-                <p class="dashelemp">Authors</p>
-                <p class="dashelemp">Users</p>
+                <p class="dashelemp" id="booksdisplay">Books</p>
+                <p class="dashelemp" id="authordisplay">Authors</p>
+                <p class="dashelemp" id="usersdisplay">Users</p>
             </div>
-           
-            <div class="books-table">
-                <table border="1">
+            <div >
+                <table class="users-table" border="1">
+                    <thead>
+                        <tr>
+                            <td class="td">#id</td>
+                            <td class="td">Name</td>
+                            <td class="td">Surname</td>
+                            <td class="td">Email</td>
+                            <td class="td">Password</td>
+                            
+                        </tr>
+                    </thead>
+                    <tbody class="table-body-users">
+
+                    </tbody>
+            </div>
+            <div>
+                <table class="books-tablee" border="1">
                     <thead>
                         <tr>
                             <td class="td">#id</td>
@@ -90,53 +105,47 @@
                         </tr>
                     </thead>
                     <tbody class="table-body">
-    
+
                     </tbody>
                 </table>
             </div>
-            <!-- <div class="publishdiv">
-                <div class="publish">
-                    <div class="close-btnn">x</div>
-                    <form class="publishform">
-                        <input class="formpublish" type="text" placeholder="#id" disabled>
-                        <input class="formpublish" type="text" placeholder="Title">
-                        <input class="formpublish" type="text" placeholder="Book Author">
-                        <input class="formpublish" type="text" placeholder="Publisher">
-                        <input class="formpublish" type="text" placeholder="Enter Price">
-                        <input class="formpublish" type="text" placeholder="Enter IMG URL">
-                        <div class="genres">Genres:
-                            <div>
-                                <input type="checkbox" id="drama">Drama
-                                <input type="checkbox" id="drama">Classics
-                                <input type="checkbox" id="drama">Novel
-                                <input type="checkbox" id="drama">History
-                                <input type="checkbox" id="drama">Children
-                                <input type="checkbox" id="drama">biography
-                                <input type="checkbox" id="drama">Fivtion
-                                <input type="checkbox" id="drama">Animal
-                                <input type="checkbox" id="drama">Detective
-                                <input type="checkbox" id="drama">Fantasy
-                                <input type="checkbox" id="drama">Espionage
-                            </div>
-    
-                        </div>
-                        <input class="formpubli" type="text" placeholder="Enter Short Description">
-                        <div class="radiodiv">Book Cover:
-                            <input type="radio" id="coverhard" name="cover" checked>
-                            <label for="coverhard" class="hard">Hard</label>
-                            <input type="radio" id="coversoft" name="cover">
-                            <label for="coversoft">Soft</label>
-                        </div>
-                        <input class="formpublish" type="text" placeholder="Published In">
-                        <input class="formpublish" type="text" placeholder="Units Sold">
-                        <div class="btnpublish">Publish</div>
-                    </form>
-    
-                </div>
-            </div> -->
+            <div>
+                <table class="authors-tablee" border="1">
+                    <thead>
+                        <tr>
+                            <td class="td">#id</td>
+                            <td class="td">Name Surname</td>
+                            <td class="td">Biography</td>
+                            <td class="td">ImageUrl</td>
+                            <td class="td lasttdd">+</td>
+                        </tr>
+                    </thead>
+                    <tbody class="authors-table-body">
+
+                    </tbody>
+                </table>
+            </div>
+            
+       
+
         </div>
+
+    </div>
+
+    <div class="authormodal">
+        <div class="authormodaldiv">
+            <div class="close-btn-author">X</div>
+            <form class="formauthorpublish">
+                <input type="text" class="inputauthor" placeholder="#id" disabled>
+                <input type="text" class="inputauthor" placeholder="Name and Surname">
+                <input type="text" class="inputauthor" placeholder="ImageUrl">
+                <input type="text" class="inputauthor" placeholder="Biography">
+                <div class="btnpublishauthor">Publish</div>
+            </form>
         </div>
         
+    </div>
+  
     <footer class="footerdash">
         <h3 class="foth3">BOOK STORE</h3>
         <p class="fotp">© All rights reserved 2022</p>

@@ -108,7 +108,7 @@ color: black;
     margin: 0 auto;
     margin-top: 100px;
     display: flex;
-    gap: 150px;
+    justify-content: space-between;
 }
 
 .left{
@@ -124,8 +124,8 @@ color: black;
 }
 
 .second-line{
-    display: flex;
-    gap: 80px;
+    /* display: flex;
+    gap: 80px; */
 }
 
 .first-p{
@@ -245,7 +245,10 @@ color: black;
 }
 
 .authright{
+   
     margin-left: 40px;
+    overflow: hidden;
+    height: 235px;
 }
 
 .rightname{
@@ -279,13 +282,21 @@ color: black;
 .two-books{
     margin-top: 150px;
     display: flex;
+    justify-content: space-evenly;
     flex-wrap: wrap;
-    padding-left: 200px;
-    
+    padding-left: 50px;
+    gap: 50px;
 }
+
+.twobookdiv{
+    display: flex;
+    gap: 30px;
+    width: 600px;
+}
+
 .two-left{
-    width: 200px;
-    height: 400px;
+    width: 300px;
+    height: 500px;
 }
 .first-pp{
     color: rgb(150, 4, 4);
@@ -416,7 +427,7 @@ footer{
     width: 500px;
     height: 250px;
     border: 1px solid red;
-    background-color: wheat;
+    background-color: rgba(231, 168, 229, 0.48);
     position: sticky;
     top: 0;
     left: 37%;
@@ -531,6 +542,7 @@ footer{
     color: mediumseagreen;
     font-size: 22px;
     font-weight: 500;
+    margin-bottom: 100px;
 }
 
 .dashelemp:hover{
@@ -541,23 +553,33 @@ footer{
 .books-table{
     margin-top: 50px;
     margin-left: 100px;
+    margin-right: 100px;
+    
     width: 500px;
     
 }
 
 .td{
-    padding-right: 150px;
+    padding-right: 10px;
     padding-left: 10px;
     font-weight: 700;
 }
 
 td{
-    padding-right: 150px;
+    padding-right: 30px;
     padding-left: 10px;
 
 }
 
 .lasttd{
+    font-size: 30px;
+    color: yellowgreen;
+    padding-left: 70px;
+    padding-right: 70px;
+    cursor: pointer;
+}
+
+.lasttdd{
     font-size: 30px;
     color: yellowgreen;
     padding-left: 70px;
@@ -684,4 +706,91 @@ td{
     width: 45%;
     margin-left: 500px;
     background-color: rgb(241, 215, 215);
+}
+
+/* .books-table{
+    
+} */
+.users-table{
+    display: none;
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 800px;
+}
+
+.books-tablee{
+    display: none;
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 1201px;
+    
+}
+
+.authors-tablee{
+    display: none;
+    margin: 0 auto;
+    margin-top: 50px;
+   
+    
+}
+
+/* .authors-table-body{
+    width: 20%;
+} */
+
+
+.authormodal{
+    display: none;
+    width: 500px;
+    height: 300px;
+    border: 1px solid red;
+    position: absolute;
+    top: 600px;
+    left: 650px;
+    background-color: #e0c8c8;
+}
+
+.authormodaldiv{
+    position: relative;
+}
+
+.close-btn-author{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.formauthorpublish{
+    padding-top: 70px;
+    padding-left: 35px;
+}
+
+.inputauthor{
+    margin-bottom: 35px;
+    margin-right: 30px;
+    width: 180px;
+    height: 50px;
+    padding-left: 10px;
+    text-decoration: none;
+    outline: none;
+}
+
+.btnpublishauthor{
+    border: 1px solid green;
+    width: 180px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+.btneditauthor{
+    border: 1px solid green;
+    width: 180px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
 }
