@@ -6,31 +6,25 @@ const siggnUp = document.querySelector(".Sign-Up")
 const loginBotnnn = document.querySelector(".login")
 
 if(localStorage.length>0){
-    axios.post("http://localhost:3000/api/books/login", {
+    document.querySelector(".suc").style.display = "block";
+    document.querySelector(".loginmodal").style.display = "none"
+    siggnUp.style.display = "none"
+    loginBotnnn.style.display = "none"
+    const newNav = `
+    <p class="loginmaill">${localStorage.getItem("email")}</p>
+    <div class="dasssh"><a class="dash" href="./dashboard.html">DashBoard</a></div>
+    <div class="logout"><a class="dash" href="./index.html">Log out</a></div>`;
 
+    navLisst.insertAdjacentHTML("beforeend", newNav);
+    document.querySelector(".logout").addEventListener("click", () => {
+    
+        localStorage.clear()
 
-        mail: localStorage.getItem("email"),
-        password: localStorage.getItem("password")
+      })
+    }
 
-    }).then(() => {
+     
 
-        document.querySelector(".suc").style.display = "block";
-        document.querySelector(".loginmodal").style.display = "none"
-        siggnUp.style.display = "none"
-        loginBotnnn.style.display = "none"
-        const newNav = `
-        <p class="loginmaill">${localStorage.getItem("email")}</p>
-        <div class="dasssh"><a class="dash" href="./dashboard.html">DashBoard</a></div>
-        <div class="logout"><a class="dash" href="./index.html">Log out</a></div>`;
-
-        navLisst.insertAdjacentHTML("beforeend", newNav);
-        document.querySelector(".logout").addEventListener("click", () => {
-        
-            localStorage.clear()
- 
-          })
-    })
-}
 
  function getAuthors(){
     document.querySelector(".spinner").style.display="block"
@@ -41,7 +35,6 @@ if(localStorage.length>0){
     document.querySelector(".spinner").style.display="none"
     renderAuthorCard(authors.data)
    }
-   
    )
 }
 
@@ -59,8 +52,6 @@ if(localStorage.length>0){
         </div>
 
         `
-        
-
         authorWrapper.insertAdjacentHTML('beforeend',authorHTML)
     })
     

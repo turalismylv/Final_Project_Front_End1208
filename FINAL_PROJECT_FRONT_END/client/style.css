@@ -574,15 +574,15 @@ td{
 .lasttd{
     font-size: 30px;
     color: yellowgreen;
-    padding-left: 70px;
-    padding-right: 70px;
+    padding-left: 127px;
+    /* padding-right: 70px; */
     cursor: pointer;
 }
 
 .lasttdd{
     font-size: 30px;
     color: yellowgreen;
-    padding-left: 70px;
+    padding-left: 25px;
     padding-right: 70px;
     cursor: pointer;
 }
@@ -593,9 +593,9 @@ td{
     cursor: pointer;
 }
 
-.lasttdd{
+/* .lasttdd{
     padding-right: 20px;
-}
+} */
 
 .dashwrapper{
     position: relative;
@@ -715,7 +715,7 @@ td{
     display: none;
     margin: 0 auto;
     margin-top: 50px;
-    width: 800px;
+    width: fit-content;
 }
 
 .books-tablee{
@@ -723,13 +723,16 @@ td{
     margin: 0 auto;
     margin-top: 50px;
     width: 1201px;
+    width: fit-content;
     
 }
 
 .authors-tablee{
     display: none;
-    margin: 0 auto;
+    
     margin-top: 50px;
+    margin-left: 283px;
+    width: fit-content;
    
     
 }

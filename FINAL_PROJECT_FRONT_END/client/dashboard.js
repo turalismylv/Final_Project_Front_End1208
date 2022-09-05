@@ -139,30 +139,20 @@ addBook.addEventListener("click", () => {
 })
 
 if (localStorage.length > 0) {
-    axios.post("http://localhost:3000/api/books/login", {
+    document.querySelector(".suc").style.display = "block";
+    document.querySelector(".loginmodal").style.display = "none"
+    signUpdash.style.display = "none"
+    loginBotndash.style.display = "none"
+    const newNav = `
+    <p class="loginmaill">${localStorage.getItem("email")}</p>
+    <div class="dasssh"><a class="dash" href="./dashboard.html">DashBoard</a></div>
+    <div class="logout"><a class="dash" href="./index.html">Log out</a></div>`;
 
+    navListdash.insertAdjacentHTML("beforeend", newNav);
+    //Buraaaaa log outtt
+    document.querySelector(".logout").addEventListener("click", () => {
 
-        mail: localStorage.getItem("email"),
-        password: localStorage.getItem("password")
-
-    }).then(() => {
-
-        document.querySelector(".suc").style.display = "block";
-        document.querySelector(".loginmodal").style.display = "none"
-        signUpdash.style.display = "none"
-        loginBotndash.style.display = "none"
-        const newNav = `
-        <p class="loginmaill">${localStorage.getItem("email")}</p>
-        <div class="dasssh"><a class="dash" href="./dashboard.html">DashBoard</a></div>
-        <div class="logout"><a class="dash" href="./index.html">Log out</a></div>`;
-
-        navListdash.insertAdjacentHTML("beforeend", newNav);
-        //Buraaaaa log outtt
-        document.querySelector(".logout").addEventListener("click", () => {
-
-            localStorage.clear()
-
-        })
+        localStorage.clear()
 
     })
 }
@@ -304,12 +294,14 @@ function renderBookCard(bookList) {
                         genre: checkArr
 
                     }).then(
-
                         renderBookCard(bookList)
+                        
                     )
                 })
                 document.querySelector(".close-btnn").addEventListener("click", () => {
                     document.querySelector(".publishdiv").style.display = "none"
+                    checkArr.length=0
+                    console.log(checkArr);
                 })
             })
         })
@@ -384,9 +376,8 @@ function renderAuthorscard(authorList) {
         <tr>
         <td>${author.id}</td>
         <td>${author.name}</td>
-        <td>${author.biography}</td>
-        <td>$${author.imgUrl}</td>
-       
+        <td style="width:500px">${author.biography}</td>
+        <td><img style='border-radius:50%' src="${author.imgUrl}" alt="Girl in a jacket" width="200" height="200"></td>
         <td class="lasttdd" >
             <img class="icons" id="author-${author.id}" src="../assets/photos/delete-icon-13.jpg" alt="">
             <img class="icons" id="authoredit-${author.id}"  src="../assets/photos/ff3fa44f1e75c25cd7b11bf8a8392d74.png" alt="">
@@ -401,9 +392,9 @@ function renderAuthorscard(authorList) {
 
         })
 
-    //     document.getElementById("authoredit-" + author.id).addEventListener("click", () => {
+        // document.getElementById("authoredit-" + author.id).addEventListener("click", () => {
 
-    //         axios.get(`http://localhost:3000/api/authors/${author.id}`).then(authorr => {
+        //     axios.get(`http://localhost:3000/api/authors/${author.id}`).then(authorr => {
 
     //         console.log(authorr)
     //     //         const authorRow = `
