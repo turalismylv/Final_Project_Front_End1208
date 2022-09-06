@@ -139,9 +139,9 @@ addBook.addEventListener("click", () => {
 })
 
 if (localStorage.length > 0) {
-    document.querySelector(".suc").style.display = "block";
-    document.querySelector(".loginmodal").style.display = "none"
-    signUpdash.style.display = "none"
+    // document.querySelector(".suc").style.display = "block";
+    // document.querySelector(".loginmodal").style.display = "none"
+    // signUpdash.style.display = "none"
     loginBotndash.style.display = "none"
     const newNav = `
     <p class="loginmaill">${localStorage.getItem("email")}</p>

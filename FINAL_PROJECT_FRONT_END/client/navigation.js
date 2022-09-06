@@ -1,5 +1,5 @@
 const logInBtn = document.querySelector(".loginbtn");
-const closeLogIn = document.querySelector(".close-btn2")
+const closeLogIn = document.querySelector(".closemodal")
 const loginBotn = document.querySelector(".login")
 const navList = document.querySelector(".infodiv");
 const signUp = document.querySelector(".Sign-Up")
@@ -8,26 +8,67 @@ const signUpForm = document.querySelector(".signupmodal")
 const signUpBtn = document.querySelector(".signupbtn");
 const logInForm = document.querySelector(".loginmodal")
 const bookBas=document.querySelector(".bookss")
+function cambiar_login() {
+    document.querySelector('.cont_forms').className = "cont_forms cont_forms_active_login";  
+  document.querySelector('.cont_form_login').style.display = "block";
+  document.querySelector('.cont_form_sign_up').style.opacity = "0";               
+  
+  setTimeout(function(){  document.querySelector('.cont_form_login').style.opacity = "1"; },400);  
+    
+  setTimeout(function(){    
+  document.querySelector('.cont_form_sign_up').style.display = "none";
+  },200);  
+    }
+  
+  function cambiar_sign_up(at) {
+    document.querySelector('.cont_forms').className = "cont_forms cont_forms_active_sign_up";
+    document.querySelector('.cont_form_sign_up').style.display = "block";
+  document.querySelector('.cont_form_login').style.opacity = "0";
+    
+  setTimeout(function(){  document.querySelector('.cont_form_sign_up').style.opacity = "1";
+  },100);  
+  
+  setTimeout(function(){   document.querySelector('.cont_form_login').style.display = "none";
+  },400);  
+  
+  
+  }    
+  
+  
+  
+  function ocultar_login_sign_up() {
+  
+  document.querySelector('.cont_forms').className = "cont_forms";  
+  document.querySelector('.cont_form_sign_up').style.opacity = "0";               
+  document.querySelector('.cont_form_login').style.opacity = "0"; 
+  
+  setTimeout(function(){
+  document.querySelector('.cont_form_sign_up').style.display = "none";
+  document.querySelector('.cont_form_login').style.display = "none";
+  },500);  
+    
+    }
+  
+  
 
 
 
+// closeSignUp.addEventListener("click", () => {
 
-closeSignUp.addEventListener("click", () => {
 
+//     signUpForm.style.display = "none"
+// })
 
-    signUpForm.style.display = "none"
-})
-
-signUp.addEventListener("click", () => {
-    signUpForm.style.display = "block"
-})
+// signUp.addEventListener("click", () => {
+//     signUpForm.style.display = "block"
+// })
 
 closeLogIn.addEventListener("click", () => {
-    logInForm.style.display = "none"
+    document.querySelector(".cotn_principal").style.display = "none"
 })
 
 loginBotn.addEventListener("click", () => {
-    logInForm.style.display = "block"
+    document.querySelector(".cotn_principal").style.display = "block"
 })
 
 
@@ -44,12 +85,14 @@ signUpBtn.addEventListener("click", () => {
         password: document.querySelector("#inputpassword").value
 
     }).then(() => {
-        document.querySelector(".succ").style.display = "block";
+        // document.querySelector(".succ").style.display = "block";
     })
         .catch(() => {
-            document.querySelector(".errr").style.display = "block";
-            document.querySelector(".formsignup").reset();
-
+            document.querySelector(".errorsingup").style.display = "block";;
+            document.querySelector("#inputname").value=""
+            document.querySelector("#inputsurname").value=""
+            document.querySelector("#inputmail").value=""
+            document.querySelector("#inputpassword").value=""
         })
 
 })
@@ -67,10 +110,11 @@ logInBtn.addEventListener("click", () => {
         localStorage.setItem("email", document.querySelector("#loginmail").value)
         localStorage.setItem("password", document.querySelector("#loginpassword").value)
 
-        document.querySelector(".suc").style.display = "block";
-        document.querySelector(".loginmodal").style.display = "none"
-        signUp.style.display = "none"
-        loginBotn.style.display = "none"
+        // document.querySelector(".suc").style.display = "block";
+        document.querySelector(".cotn_principal").style.display = "none"
+        document.querySelector(".login").style.display="none"
+        // signUp.style.display = "none"
+        // loginBotn.style.display = "none"
         const newNav = `
         <p class="loginmaill">${document.querySelector("#loginmail").value}</p>
         <div class="dasssh"><a class="dash" href="./dashboard.html">DashBoard</a></div>
@@ -88,9 +132,9 @@ logInBtn.addEventListener("click", () => {
 
   
         .catch(() => {
-            document.querySelector(".err").style.display = "block";
-            document.querySelector(".formlogin").reset();
-
+            document.querySelector(".errorlogin").style.display = "block";
+            document.querySelector("#loginmail").value=""
+            document.querySelector("#loginpassword").value=""
         })
 })
 

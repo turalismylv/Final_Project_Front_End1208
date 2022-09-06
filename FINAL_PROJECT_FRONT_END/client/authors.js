@@ -1,4 +1,4 @@
-const authorWrapper = document.querySelector(".author-wrapper")
+const authorWrapper = document.querySelector(".cols")
 const infoMail=localStorage.getItem("email")
 const infoPass=localStorage.getItem("password")
 const navLisst = document.querySelector(".infodiv");
@@ -6,9 +6,9 @@ const siggnUp = document.querySelector(".Sign-Up")
 const loginBotnnn = document.querySelector(".login")
 
 if(localStorage.length>0){
-    document.querySelector(".suc").style.display = "block";
-    document.querySelector(".loginmodal").style.display = "none"
-    siggnUp.style.display = "none"
+    // document.querySelector(".suc").style.display = "block";
+    // document.querySelector(".loginmodal").style.display = "none"
+    // siggnUp.style.display = "none"
     loginBotnnn.style.display = "none"
     const newNav = `
     <p class="loginmaill">${localStorage.getItem("email")}</p>
@@ -42,15 +42,21 @@ if(localStorage.length>0){
 
     authorList.map(author=>{
         const authorHTML=`
-        <div class="authornum">
-            <div ><img class="authleft" src="${author.imgUrl}" alt=""></div>
-
-            <div class="authright">
-                <h3 class="rightname">${author.name}</h3>
-                <p class="rightinfo">${author.biography}</p>
+        <div class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <div class="front" style="background-image: url(${author.imgUrl})">
+                        <div class="inner">
+                            <p>${author.name}</p>
+                           
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                            <p class="authbio" >${author.biography}</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-
         `
         authorWrapper.insertAdjacentHTML('beforeend',authorHTML)
     })
@@ -58,3 +64,4 @@ if(localStorage.length>0){
 }
 
 getAuthors();
+

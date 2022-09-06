@@ -1,4 +1,4 @@
-const bookWrapper = document.querySelector(".book-wrapper")
+const bookWrapper = document.querySelector(".books-container")
 
 const infoMail = localStorage.getItem("email")
 const infoPass = localStorage.getItem("password")
@@ -7,9 +7,9 @@ const signUpp = document.querySelector(".Sign-Up")
 const loginBotnn = document.querySelector(".login")
 
 if (localStorage.length > 0) {
-    document.querySelector(".suc").style.display = "block";
-    document.querySelector(".loginmodal").style.display = "none"
-    signUpp.style.display = "none"
+    // document.querySelector(".suc").style.display = "block";
+    // document.querySelector(".loginmodal").style.display = "none"
+    // signUpp.style.display = "none"
     loginBotnn.style.display = "none"
     const newNav = `
     <p class="loginmaill">${localStorage.getItem("email")}</p>
@@ -26,10 +26,10 @@ if (localStorage.length > 0) {
 
 function getBooks() {
     // SHOW LOADING 
-    document.querySelector(".spinner").style.display = "block"
+    document.querySelector(".spinnerrr").style.display = "block"
     axios.get("http://localhost:3000/api/books").then(books => {
         // HIDE LOADING
-        document.querySelector(".spinner").style.display = "none"
+        document.querySelector(".spinnerrr").style.display = "none"
         renderBookCard(books.data)
     })
 }
@@ -38,18 +38,29 @@ function renderBookCard(bookList) {
 
     bookList.map(book => {
         const bookHTML = `
-        <div class="book-second">
-        <div class="bookinfo">
-            <div >
-                <img class="left2" src="${book.imageUrl}" alt="">
-            </div>
-            <div class="right2">
-                <div class="divname" >${book.title}</div>
-                <div class="divauthor"><span class="by">By</span>${book.author}</div>
-                <div class="spoiler">${book.synopsis}</div>
-            </div>
+        <div class="book">
+        <div class="book-front">
+          <div>
+            <img src="${book.imageUrl}" alt="The Grapes Of Wrath" class="book-cover" />
+          </div>
+          <div></div>
         </div>
-    </div>
+        <div class="book-pages">
+          <div></div>
+          <div>
+            <h1 class="title">${book.title}</h1>
+            <h4 class="author">By ${book.author}</h4>
+            <p class="summary">
+              ${book.synopsis}
+            </p>
+            <h6 class="year">Price: $${book.price}</h6>
+          </div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="book-back"></div>
+      </div>
         `
         bookWrapper.insertAdjacentHTML('beforeend', bookHTML)
     })

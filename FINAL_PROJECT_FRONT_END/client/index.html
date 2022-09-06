@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style2.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
         integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -15,6 +16,7 @@
 
     <script src="./script.js" defer></script>
     <script src="./navigation.js" defer></script>
+
     <title>Document</title>
 </head>
 
@@ -34,7 +36,7 @@
                 <div><a class="authors" href="./authors.html">Authors</a></div>
 
                 <div class="login">Login</div>
-                <div class="Sign-Up">Sign Up</div>
+                <!-- <div class="Sign-Up">Sign Up</div> -->
             </div>
 
             <!-- <p>turalhi@code.edu.az</p>
@@ -46,70 +48,119 @@
         <img class="spinnerRR" src="../assets/Spinner-1s-200px.svg" alt="">
 
         <!-- Modal SignUp -->
-        <div class="signupmodal">
-            <div class="close-btn">x</div>
-            <div class="form">
-                <form class="formsignup">
-                    <input class="signupinput" id="inputname" type="text" placeholder="Type name">
-                    <input class="signupinput" id="inputsurname" type="text" placeholder="Type surname">
-                    <input class="signupinput" id="inputmail" type="text" placeholder="Enter mail">
-                    <input class="signupinput" id="inputpassword" type="password" placeholder="Enter Password">
-                </form>
-                <div class="signupbtn">Sign Up</div>
-                <p class="succ">HAKUNA MA TA TA</p>
-                <p class="errr">Error</p>
-            </div>
-        </div>
-        <!-- Modal Login -->
-        <div class="loginmodal">
-            <div class="close-btn2">x</div>
-            <div class="form2">
-                <form class="formlogin">
-                    <input class="signupinput" id="loginmail" type="text" placeholder="Enter mail">
-                    <input class="signupinput" id="loginpassword" type="password" placeholder="Enter Password">
-                </form>
-                <div class="loginbtn">Login</div>
-                <p class="suc">HAKUNA MA TA TA</p>
-                <p class="err">Error</p>
-            </div>
-        </div>
+        <!-- SIGNUP -->
+        <div class="cotn_principal">
+            <div class="cont_centrar">
+
+                <div class="cont_login">
+                    <div class="cont_info_log_sign_up">
+                        <div class="closemodal">X</div>
+                        <div class="col_md_login">
+                            <div class="cont_ba_opcitiy">
+
+                                <h2>LOGIN</h2>
+                                <p>Accountun var? Ne gozleyirsen Login ol!</p>
+                                <button class="btn_login" onclick="cambiar_login()">LOGIN</button>
+                            </div>
+                        </div>
+                        <div class="col_md_sign_up">
+                            <div class="cont_ba_opcitiy">
+                                <h2>SIGN UP</h2>
 
 
+                                <p>Accountun yoxdur? Ne gozleyirsen SIGN UP ol!</p>
+
+                                <button class="btn_sign_up" onclick="cambiar_sign_up()">SIGN UP</button>
+                            </div>
+                        </div>
+                    </div>
 
 
-        <div class="one-book">
+                    <div class="cont_back_info">
+                        <div class="cont_img_back_grey">
+                            <img src="https://images.unsplash.com/photo-1491841573634-28140fc7ced7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                                alt="" />
+                        </div>
 
-            <!-- <div >
-            <img class="left" src="http://prodimage.images-bn.com/pimages/9781499369748_p0_v3_s1200x630.jpg" alt="">
-        </div>
-        <div class="right">
-            <div>
-                <p class="first-p">Pride and Prejudice</p>
-            </div>
-            <div class="second-line">
-                <div>
-                    <p class="second-p">Author</p>
-                    <p class="secondd-p">Jane Austen</p>
+                    </div>
+                    <div class="cont_forms">
+                        <div class="cont_img_back_">
+                            <img src="https://images.unsplash.com/photo-1533669955142-6a73332af4db?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1574&q=80"
+                                alt="" />
+                        </div>
+                        <div class="cont_form_login">
+                            <a href="#" onclick="ocultar_login_sign_up()"><img class="material-icons">X</img></a>
+                            <h3 class="errorlogin">Email ve ya Parol yanlisdir!</h3>
+                            <h2>LOGIN</h2>
+
+                            <input type="text" id="loginmail" placeholder="Email" />
+                            <input type="password" id="loginpassword" placeholder="Password" />
+                            <button class="btn_login loginbtn" onclick="cambiar_login()">LOGIN</button>
+                        </div>
+
+                        <div class="cont_form_sign_up">
+                            <a href="#" onclick="ocultar_login_sign_up()"><i class="material-icons">X</i></a>
+                            <h3 class="errorsingup">Error var,Yeniden ceht et!</h3>
+                            <h2>SIGN UP</h2>
+
+                            <input type="text" id="inputname" placeholder="Name" />
+                            <input type="text" id="inputsurname" placeholder="Surname" />
+                            <input type="email" id="inputmail" placeholder="Email" />
+                            <input type="password" id="inputpassword" placeholder="Password" />
+                            <button class="btn_sign_up signupbtn" onclick="cambiar_sign_up()">SIGN UP</button>
+
+                        </div>
+
+                    </div>
+
                 </div>
-                <div>
-                    <p class="second-p" >Type</p>
-                    <p class="secondd-p">Drama,Classics</p>
-                </div>
-                <div>
-                    <p class="second-p">Layout</p>
-                    <p class="secondd-p">Hard Cover</p>
-                </div>
-              
             </div>
-            <div>
-                <p class="three-p">18$</p>
-            </div>
-        </div> -->
         </div>
 
-        <div class="two-book">
-            <div class="two-books">
-                <!-- <div class="twobookdiv">
+        <!-- ILKKK -->
+
+        <div class="component">
+            <ul class="align">
+                
+            </ul>
+        </div>
+
+
+        <!-- <div class="one-book"> -->
+
+
+
+        <!-- <div >
+                    <img class="left" src="http://prodimage.images-bn.com/pimages/9781499369748_p0_v3_s1200x630.jpg" alt="">
+                </div>
+                <div class="right">
+                    <div>
+                        <p class="first-p">Pride and Prejudice</p>
+                    </div>
+                    <div class="second-line">
+                        <div>
+                            <p class="second-p">Author</p>
+                            <p class="secondd-p">Jane Austen</p>
+                        </div>
+                        <div>
+                            <p class="second-p" >Type</p>
+                            <p class="secondd-p">Drama,Classics</p>
+                        </div>
+                        <div>
+                            <p class="second-p">Layout</p>
+                            <p class="secondd-p">Hard Cover</p>
+                        </div>
+                    
+                    </div>
+                    <div>
+                        <p class="three-p">18$</p>
+                    </div>
+                </div> -->
+        <!-- </div> -->
+
+        <!-- <div class="two-book"> -->
+        <!-- <div class="two-books"> -->
+        <!-- <div class="twobookdiv">
                     <div>
                         <img class="two-left" src="http://prodimage.images-bn.com/pimages/9781499369748_p0_v3_s1200x630.jpg"
                             alt="">
@@ -139,38 +190,43 @@
                     </div>
                 </div> -->
 
-             
-            </div>
+
+        <!-- </div> -->
 
 
-        </div>
+        <!-- </div> -->
 
         <section>
             <div class="section2">
                 <h3 class="allbook">TOP SELLING BOOKS</h3>
                 <div class="section2div">
-                    <!-- <div class="divbook">
-                        <img class="divbookimg" src="https://imusic.b-cdn.net/images/item/original/822/9781788701822.jpg?robert-lacey-2020-the-crown-the-official-history-behind-the-hit-netflix-series-political-scandal-personal-struggle-and-the-years-that-defined-elizabeth-ii-1956-1977-paperback-book&class=scaled" alt="">
-                        <h3 class="divbookh3">The Crown</h3>
-                        <p class="divbookp"><span class="divbooksp">By</span>Robert Lacey</p>
-                        <p class="divbookprice">$30</p>
-                    </div> -->
+
+                    <div class="containerr">
+
+
+                    </div>
+
+
                 </div>
 
             </div>
 
         </section>
+        <div class="topsell">AUTHORS</div>
+
 
         <section>
             <div class="section3">
-                <h3 class="author">AUTHORS</h3>
-                <div class="section3div">
-                    <!-- <div class="sec3div">
-                       
-                        <img class="sec3img" src="https://media.npr.org/assets/img/2016/02/19/ap_844183792565_custom-2eaad7c41a5ffb8a78675aacbeca542c5761dfba-s1100-c50.jpg" alt="">
-                        <p class="sec3p">Harper Lee</p>
-                    </div> -->
-                </div>
+
+
+                <section class="hero-section">
+
+                    <div class="card-grid">
+
+
+                </section>
+
+
             </div>
         </section>
 

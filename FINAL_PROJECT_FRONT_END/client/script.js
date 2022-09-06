@@ -1,7 +1,7 @@
-const oneBook = document.querySelector(".one-book");
+const oneBook = document.querySelector(".align");
 const twoBook = document.querySelector(".two-books");
-const topSelling = document.querySelector(".section2div");
-const allAuthors = document.querySelector(".section3div")
+const topSelling = document.querySelector(".containerr");
+const allAuthors = document.querySelector(".card-grid")
 
 
 
@@ -15,9 +15,9 @@ if(localStorage.length>0){
 
     }).then(() => {
 
-        document.querySelector(".suc").style.display = "block";
-        document.querySelector(".loginmodal").style.display = "none"
-        signUp.style.display = "none"
+        // document.querySelector(".suc").style.display = "block";
+        // document.querySelector(".loginmodal").style.display = "none"
+        // signUp.style.display = "none"
         loginBotn.style.display = "none"
         const newNav = `
         <p class="loginmaill">${localStorage.getItem("email")}</p>
@@ -46,20 +46,27 @@ function getAuthors() {
 
 function renderAuthorCard(authorList) {
 
-    authorList.map((author, index) => {
-        if (index < 6) {
-            const authorHTML = `
-            <div class="sec3div">
-                           
-                 <img class="sec3img" src="${author.imgUrl}" alt="">
-                 <p class="sec3p">${author.name}</p>
-             </div>
+    authorList.map((author,index) => {
+            if(index<8){
+                const authorHTML = `
+                <a class="card" href="#">
+                <div class="card__background"
+                    style="background-image: url(${author.imgUrl})">
+                </div>
+                <div class="card__content">
+                   
+                    <h3 class="card__heading">${author.name}</h3>
+                </div>
+            </a>
+        
+                `
     
-            `
-
-
-            allAuthors.insertAdjacentHTML('afterbegin', authorHTML)
-        }
+    
+                allAuthors.insertAdjacentHTML('beforeend', authorHTML)
+                
+            }
+            
+        
 
     })
 
@@ -73,7 +80,7 @@ function getBooks() {
 
         document.querySelector(".spinnerRR").style.display="none"
         renderBookCard(books.data)
-        renderBookkCard(books.data)
+        
         sortListRender(books.data)
     })
 }
@@ -81,39 +88,50 @@ function getBooks() {
 function renderBookCard(bookList) {
 
     bookList.map((book, index) => {
-        if (index < 1) {
+        if (index < 4) {
             const bookHTML = `
             
-                    <div >
-                        <img class="left" src="${book.imageUrl}" alt="">
-                    </div>
-                    <div class="right">
-                        <div>
-                            <p class="first-p">${book.title}</p>
-                        </div>
-                        <div class="second-line">
-                            <div>
-                                <p class="second-p">Author</p>
-                                <p class="secondd-p">${book.author}</p>
-                            </div>
-                            <div>
-                                <p class="second-p" >Type</p>
-                                <p class="secondd-p">${book.genre}</p>
-                            </div>
-                            <div>
-                                <p class="second-p">Layout</p>
-                                <p class="secondd-p">${book.bookCover}</p>
-                            </div>
-                        
-                        </div>
-                        <div>
-                            <p class="three-p">${book.price}$</p>
-                        </div>
-                    </div>
+            <li>
+            <figure class='book'>
+                <!-- Front -->
+                <ul class='hardcover_front'>
+                    <li>
+                        <img src="${book.imageUrl}" alt="" width="100%" height="100%">
+                        <span class="ribbon bestseller">Nº1</span>
+                    </li>
+                    <li></li>
+                </ul>
+                <!-- Pages -->
+                <ul class='page'>
+                    <li></li>
+                    <li>
+                      <p class="synopsisbook">${book.synopsis}</p>
+                    </li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <!-- Back -->
+                <ul class='hardcover_back'>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <ul class='book_spine'>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <figcaption>
+                    <h1>${book.title}</h1>
+                    <span>By ${book.author}</span>
+                    <p>Genre: ${book.genre}</p>
+                    <h3 class="prices">$${book.price}</h3>
+                </figcaption>
+            </figure>
+        </li>
             
             `;
 
-            oneBook.insertAdjacentHTML('afterbegin', bookHTML)
+            oneBook.insertAdjacentHTML('beforeend', bookHTML)
         }
 
 
@@ -124,62 +142,6 @@ function renderBookCard(bookList) {
 getBooks();
 
 
-// function getTwoBooks(){
-
-//     axios.get("http://localhost:3000/api/books").then(books=>renderBookkCard(books.data))
-//  }
-
-
-
-function renderBookkCard(twobookList) {
-
-    twobookList.map((books, index) => {
-        if (index == 1 || index == 2) {
-            const booksHTML = `
-            <div class="twobookdiv">
-            
-            <div>
-             <img class="two-left" src="${books.imageUrl}"
-                 alt="">
-             </div>
-         <div class="two-right">
-             <div>
-                 <p class="first-pp">${books.title}</p>
-             </div>
-             <div class="second-line">
-                 <div>
-                     <p class="second-p">Author</p>
-                     <p class="secondd-p">${books.author}</p>
-                 </div>
-                 <div>
-                     <p class="second-p">Type</p>
-                     <p class="secondd-p">${books.genre}</p>
-                 </div>
-                 <div>
-                     <p class="second-p">Layout</p>
-                     <p class="secondd-p">Hard Cover</p>
-                 </div>
-
-             </div>
-             <div>
-                 <p class="three-p">18$</p>
-             </div>
-         </div>
-     </div>
-            </div>
-             
-             
-             
-             `
-
-
-            twoBook.insertAdjacentHTML('afterbegin', booksHTML)
-        }
-
-
-    })
-
-}
 
 function sortListRender(sortbookList) {
    
@@ -191,13 +153,15 @@ function sortListRender(sortbookList) {
     sortbookList.map((bookss, index) => {
         if (index < 5) {
             const bookssHTML = `
-            
-            <div class="divbook">
-            <img class="divbookimg" src="${bookss.imageUrl}" alt="">
-            <h3 class="divbookh3">${bookss.title}</h3>
-            <p class="divbookp"><span class="divbooksp">By</span>${bookss.author}</p>
-            <p class="divbookprice">$${bookss.price}</p>
-             </div>
+            <div class="cardd">
+            <div class="Boxx">
+              <img class="img" src="${bookss.imageUrl}">
+            </div>
+            <div class="detailss">
+              <h2>By ${bookss.author}</h2>
+              <p>${bookss.synopsis} </p>
+            </div>
+          </div>
              
              `
 
@@ -213,4 +177,6 @@ function sortListRender(sortbookList) {
 
 
 
-//  getTwoBooks();
+
+
+
