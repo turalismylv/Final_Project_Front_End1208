@@ -612,8 +612,9 @@ td{
     height: 800px;
     border: 1px solid red;
     position: absolute;
-    top: 200px;
-    left: 650px;
+    top: 66%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: whitesmoke;
     
 }
@@ -734,7 +735,7 @@ td{
     display: none;
     
     margin-top: 50px;
-    margin-left: 283px;
+    margin-left: 16%;
     width: fit-content;
    
     
@@ -751,8 +752,9 @@ td{
     height: 300px;
     border: 1px solid red;
     position: absolute;
-    top: 600px;
-    left: 650px;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: #e0c8c8;
 }
 

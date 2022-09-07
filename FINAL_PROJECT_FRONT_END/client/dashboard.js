@@ -71,17 +71,28 @@ addBook.addEventListener("click", () => {
                             <input class="formpublish" id="url" type="text" placeholder="Enter IMG URL">
                             <div class="genres">Genres:
                                 <div>
-                                    <input type="checkbox" class="inputs" value="Drama" id="drama" >Drama
-                                    <input type="checkbox" class="inputs" value="Classics" id="drama">Classics
-                                    <input type="checkbox" class="inputs" value="Novel" id="drama">Novel
-                                    <input type="checkbox" class="inputs" value="History" id="drama">History
-                                    <input type="checkbox" class="inputs" value="Children" id="drama">Children
-                                    <input type="checkbox" class="inputs" value="Biography" id="drama">biography
-                                    <input type="checkbox" class="inputs" value="Fivtion" id="drama">Fivtion
-                                    <input type="checkbox" class="inputs" value="Animal" id="drama">Animal
-                                    <input type="checkbox" class="inputs" value="Detective" id="drama">Detective
-                                    <input type="checkbox" class="inputs" value="Fantasy" id="drama">Fantasy
-                                    <input type="checkbox"  class="inputs" value="Espionage" id="drama">Espionage
+                                <input type="checkbox" id="drama" class="inputs" value="Drama">
+                                <label for="drama">Drama</label>
+                                <input type="checkbox" id="classics" class="inputs" value="Classics" >
+                                <label for="classics">Classics</label>
+                                <input type="checkbox" id="novel" class="inputs" value="Novel" >
+                                <label for="novel">Novel</label>
+                                <input type="checkbox" id="history" class="inputs" value="History" >
+                                <label for="history">History</label>
+                                <input type="checkbox" id="children" class="inputs" value="Children" >
+                                <label for="children">Children</label>
+                                <input type="checkbox" id="biography" class="inputs" value="Biography" >
+                                <label for="biography">Biography</label>
+                                <input type="checkbox" id="fiction" class="inputs" value="Fiction" >
+                                <label for="fiction">Fiction</label>
+                                <input type="checkbox" id="animal" class="inputs" value="Animal" >
+                                <label for="animal">Animal</label>
+                                <input type="checkbox" id="detective" class="inputs" value="Detective" >
+                                <label for="detective">Detective</label>
+                                <input type="checkbox" id="fantasy" class="inputs" value="Fantasy" >
+                                <label for="fantasy">Fantasy</label>
+                                <input type="checkbox" id="espionage" class="inputs" value="Espionage" >
+                                <label for="espionage">Espionage</label>
                                 </div>
 
                             </div>
@@ -205,25 +216,36 @@ function renderBookCard(bookList) {
                             <input class="formpublish" id="url" type="text" placeholder="Enter IMG URL">
                             <div class="genres">Genres:
                                 <div>
-                                    <input type="checkbox" class="salam" value="Drama"  >Drama
-                                    <input type="checkbox" class="salam" value="Classics" >Classics
-                                    <input type="checkbox" class="salam" value="Novel" >Novel
-                                    <input type="checkbox" class="salam" value="History" >History
-                                    <input type="checkbox" class="salam" value="Children" >Children
-                                    <input type="checkbox" class="salam" value="Biography" >biography
-                                    <input type="checkbox" class="salam" value="Fiction" >Fiction
-                                    <input type="checkbox" class="salam" value="Animal" >Animal
-                                    <input type="checkbox" class="salam" value="Detective" >Detective
-                                    <input type="checkbox" class="salam" value="Fantasy" >Fantasy
-                                    <input type="checkbox" class="salam" value="Espionage" >Espionage
+                                    <input type="checkbox" id="drama" class="salam" value="Drama">
+                                    <label for="drama">Drama</label>
+                                    <input type="checkbox" id="classics" class="salam" value="Classics" >
+                                    <label for="classics">Classics</label>
+                                    <input type="checkbox" id="novel" class="salam" value="Novel" >
+                                    <label for="novel">Novel</label>
+                                    <input type="checkbox" id="history" class="salam" value="History" >
+                                    <label for="history">History</label>
+                                    <input type="checkbox" id="children" class="salam" value="Children" >
+                                    <label for="children">Children</label>
+                                    <input type="checkbox" id="biography" class="salam" value="Biography" >
+                                    <label for="biography">Biography</label>
+                                    <input type="checkbox" id="fiction" class="salam" value="Fiction" >
+                                    <label for="fiction">Fiction</label>
+                                    <input type="checkbox" id="animal" class="salam" value="Animal" >
+                                    <label for="animal">Animal</label>
+                                    <input type="checkbox" id="detective" class="salam" value="Detective" >
+                                    <label for="detective">Detective</label>
+                                    <input type="checkbox" id="fantasy" class="salam" value="Fantasy" >
+                                    <label for="fantasy">Fantasy</label>
+                                    <input type="checkbox" id="espionage" class="salam" value="Espionage" >
+                                    <label for="espionage">Espionage</label>
                                 </div>
 
                             </div>
                             <input class="formpubli" id="synopsis" type="text" placeholder="Enter Short Description">
                             <div class="radiodiv">Book Cover:
-                                <input type="radio" id="coverhard" name="cover" checked>
+                                <input type="radio" id="coverhard" class="radiodu" value="Hard" name="cover" checked>
                                 <label for="coverhard" class="hard">Hard</label>
-                                <input type="radio" id="coversoft" name="cover">
+                                <input type="radio" id="coversoft" class="radiodu" value="Soft" name="cover">
                                 <label for="coversoft">Soft</label>
                                 </div>
                             <input class="formpublish" id="date" type="text" placeholder="Published In">
@@ -245,7 +267,10 @@ function renderBookCard(bookList) {
                 document.querySelector("#sold").value = bookk.data.sold
                 document.querySelector("#synopsis").value = bookk.data.synopsis
                 document.querySelector("#oldid").value = bookk.data.id
-                // document.querySelectorAll(`input[type = "checkbox"]`).value=bookk.data.genre
+                bookk.data.bookCover === "Hard" ? document.getElementById("coverhard").checked = true : document.getElementById("coversoft").checked = true;
+
+                // document.querySelector("#coversoft").checked = bookk.data.bookCover 
+
                 bookk.data.genre.map((item) => {
                     const salam = document.querySelectorAll(`input[type = "checkbox"]`)
 
@@ -268,8 +293,8 @@ function renderBookCard(bookList) {
                     bookk.data.publisher = document.querySelector("#publisher").value
                     bookk.data.sold = document.querySelector("#sold").value
                     bookk.data.synopsis = document.querySelector("#synopsis").value
-                    bookk.data.id = document.querySelector("#oldid").value,
-                        bookk.data.bookCover = document.querySelector("#coverhard").checked ? "Hard" : "Soft"
+                    bookk.data.id = document.querySelector("#oldid").value
+                    bookk.data.bookCover=document.getElementById("coverhard").checked == true?"Hard":"Soft"
 
                     const checkInputs = document.getElementsByClassName("salam")
 
@@ -300,8 +325,18 @@ function renderBookCard(bookList) {
                 })
                 document.querySelector(".close-btnn").addEventListener("click", () => {
                     document.querySelector(".publishdiv").style.display = "none"
-                    checkArr.length=0
-                    console.log(checkArr);
+                    bookk.data.genre.map((item) => {
+                        const salam = document.querySelectorAll(`input[type = "checkbox"]`)
+    
+                        for (let i = 0; i < salam.length; i++) {
+    
+                            if (salam[i].value === item) {
+                                salam[i].checked = false
+                                break;
+    
+                            }
+                        }
+                    })
                 })
             })
         })
