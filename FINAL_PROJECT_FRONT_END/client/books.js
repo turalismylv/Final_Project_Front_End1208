@@ -7,9 +7,7 @@ const signUpp = document.querySelector(".Sign-Up")
 const loginBotnn = document.querySelector(".login")
 
 if (localStorage.length > 0) {
-    // document.querySelector(".suc").style.display = "block";
-    // document.querySelector(".loginmodal").style.display = "none"
-    // signUpp.style.display = "none"
+  
     loginBotnn.style.display = "none"
     const newNav = `
     <p class="loginmaill">${localStorage.getItem("email")}</p>

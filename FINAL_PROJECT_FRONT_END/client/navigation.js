@@ -53,15 +53,7 @@ function cambiar_login() {
 
 
 
-// closeSignUp.addEventListener("click", () => {
 
-
-//     signUpForm.style.display = "none"
-// })
-
-// signUp.addEventListener("click", () => {
-//     signUpForm.style.display = "block"
-// })
 
 closeLogIn.addEventListener("click", () => {
     document.querySelector(".cotn_principal").style.display = "none"
@@ -85,7 +77,7 @@ signUpBtn.addEventListener("click", () => {
         password: document.querySelector("#inputpassword").value
 
     }).then(() => {
-        // document.querySelector(".succ").style.display = "block";
+        
     })
         .catch(() => {
             document.querySelector(".errorsingup").style.display = "block";;
@@ -110,11 +102,10 @@ logInBtn.addEventListener("click", () => {
         localStorage.setItem("email", document.querySelector("#loginmail").value)
         localStorage.setItem("password", document.querySelector("#loginpassword").value)
 
-        // document.querySelector(".suc").style.display = "block";
+        
         document.querySelector(".cotn_principal").style.display = "none"
         document.querySelector(".login").style.display="none"
-        // signUp.style.display = "none"
-        // loginBotn.style.display = "none"
+        
         const newNav = `
         <p class="loginmaill">${document.querySelector("#loginmail").value}</p>
         <div class="dasssh"><a class="dash" href="./dashboard.html">DashBoard</a></div>

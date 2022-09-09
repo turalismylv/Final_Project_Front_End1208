@@ -150,9 +150,7 @@ addBook.addEventListener("click", () => {
 })
 
 if (localStorage.length > 0) {
-    // document.querySelector(".suc").style.display = "block";
-    // document.querySelector(".loginmodal").style.display = "none"
-    // signUpdash.style.display = "none"
+  
     loginBotndash.style.display = "none"
     const newNav = `
     <p class="loginmaill">${localStorage.getItem("email")}</p>
@@ -427,57 +425,7 @@ function renderAuthorscard(authorList) {
 
         })
 
-        // document.getElementById("authoredit-" + author.id).addEventListener("click", () => {
-
-        //     axios.get(`http://localhost:3000/api/authors/${author.id}`).then(authorr => {
-
-    //         console.log(authorr)
-    //     //         const authorRow = `
-    //     //         <div class="authormodal">
-    //     //         <div class="authormodaldiv">
-    //     //             <div class="close-btn-author">X</div>
-    //     //             <form class="formauthorpublish">
-    //     //                 <input type="text" class="inputauthor" class="idd" placeholder="#id" disabled>
-    //     //                 <input type="text" class="inputauthor" id="name" placeholder="Name and Surname">
-    //     //                 <input type="text" class="inputauthor" id="url" placeholder="ImageUrl">
-    //     //                 <input type="text" class="inputauthor" id="bio" placeholder="Biography">
-    //     //                 <div class="btneditauthor">Edit</div>
-    //     //             </form>
-    //     //         </div>
-                
-    //     //     </div>
         
-    //     // `
-    //     //         dashWrapper.insertAdjacentHTML("afterbegin", authorRow)
-
-    //     //         document.querySelector(".authormodal").style.display = "block"
-
-    //     //         document.querySelector("#idd").value=authorr.data.id
-    //     //         document.querySelector("#name").value=authorr.data.name
-    //     //         document.querySelector("#url").value=authorr.data.imgUrl
-    //     //         document.querySelector("#bio").value=authorr.data.biography
-
-    //     //         document.querySelector("#btneditauthor").addEventListener("click",()=>{
-
-    //     //             authorr.data.id=document.querySelector("#idd").value
-    //     //             authorr.data.name=document.querySelector("#name").value
-    //     //             authorr.data.imgUrl=document.querySelector("#url").value
-    //     //             authorr.data.biography=document.querySelector("#bio").value
-
-    //     //             axios.post(`http://localhost:3000/api/authors`,{
-    //     //                 id:authorr.data.id,
-    //     //                 name:authorr.data.name,
-    //     //                 imgUrl:authorr.data.imgUrl,
-    //     //                 biography:authorr.data.biography
-    //     //             }).then(
-
-    //     //                 renderAuthorscard(authorList)
-    //     //             )
-    //     //         })
-
-    //         })
-        
-    //    })
     })
 }
 
