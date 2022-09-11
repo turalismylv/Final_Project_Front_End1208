@@ -31,6 +31,12 @@ justify-content: space-between;
     gap: 50px;
 }
 
+
+.synop{
+  overflow: hidden;
+  height: 326px;
+}
+
 .logo{
     width: 150px;
     height: 150px;
@@ -575,9 +581,10 @@ td{
 }
 
 .lasttd{
+    text-align: center;
     font-size: 30px;
     color: yellowgreen;
-    padding-left: 127px;
+    /* padding-left: 127px; */
     /* padding-right: 70px; */
     cursor: pointer;
 }
@@ -585,8 +592,9 @@ td{
 .lasttdd{
     font-size: 30px;
     color: yellowgreen;
-    padding-left: 25px;
-    padding-right: 70px;
+    /* padding-left: 25px;
+    padding-right: 70px; */
+    text-align: center;
     cursor: pointer;
 }
 

@@ -157,7 +157,7 @@ function sortListRender(sortbookList) {
             </div>
             <div class="detailss">
               <h2>By ${bookss.author}</h2>
-              <p>${bookss.synopsis} </p>
+              <p class="synop">${bookss.synopsis} </p>
             </div>
           </div>
              
